@@ -93,7 +93,7 @@ EVP_PKEY *d2i_PrivateKey(int type, EVP_PKEY **a, const unsigned char **pp,
         goto err;
     }
 
-fprintf(stderr, "GMSSL: %s %d\n", __FILE__, __LINE__);
+//fprintf(stderr, "GMSSL: %s %d\n", __FILE__, __LINE__);
 
     if (!ret->ameth->old_priv_decode ||
         !ret->ameth->old_priv_decode(ret, pp, length)) {
@@ -115,10 +115,10 @@ fprintf(stderr, "GMSSL: %s %d\n", __FILE__, __LINE__);
             goto err;
         }
     }
-fprintf(stderr, "GMSSL: %s %d\n", __FILE__, __LINE__);
+//fprintf(stderr, "GMSSL: %s %d\n", __FILE__, __LINE__);
     if (a != NULL)
         (*a) = ret;
-fprintf(stderr, "GMSSL: %s %d\n", __FILE__, __LINE__);
+//fprintf(stderr, "GMSSL: %s %d\n", __FILE__, __LINE__);
     return (ret);
  err:
 fprintf(stderr, "GMSSL: %s %d\n", __FILE__, __LINE__);
